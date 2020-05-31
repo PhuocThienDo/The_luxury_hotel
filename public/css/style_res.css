@@ -1,0 +1,117 @@
+@media(max-width: 1024px) {
+    .box {
+        padding: 0;
+    }
+    .box h2 {
+        font-size: 18px
+    }
+    .title_header_body {
+        padding-top: 60px;
+        padding-bottom: 35px
+    }
+    .tit_header {
+        padding-bottom: 40px
+    }
+    .news .header-title {
+        padding: 50px 0 30px;
+    }
+    .news {
+        padding-bottom: 40px
+    }
+    .menu_footer nav ul li {
+        margin: 0 20px 0 0;
+    }
+    .menu_footer nav ul li a,
+    footer p {
+        font-size: 12px
+    }
+    .menu_footer strong {
+        position: relative;
+    }
+}
+
+@media(max-width: 767px) {
+    .box_before::before,
+    .box_before::after {
+        display: none
+    }
+    .our-room .lisssst {
+        padding: 40px 0 40px 0px;
+        position: relative;
+        z-index: 2;
+    }
+    .our-room .iframe_img {
+        right: 0;
+    }
+    .our-room::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(53, 53, 53, 0.7);
+        z-index: 1
+    }
+    .add-padding {
+        padding: 0 15px 40px 15px;
+    }
+    .text-box {
+        position: relative;
+        margin-bottom: 40px
+    }
+    .fun-facts .grid-item {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .news .item .text-ticonten {
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+    .news .owl-theme .owl-dots {
+        margin-left: 0
+    }
+    .news .header-title {
+        padding-top: 0
+    }
+    .news {
+        padding-bottom: 0px;
+    }
+    .menu_footer nav {
+        text-align: center;
+    }
+    .menu_footer nav ul {
+        display: block;
+    }
+    .menu_footer nav ul.menu_left,
+    .menu_footer nav ul.menu_right {
+        float: none;
+    }
+    .menu_footer nav ul li {
+        margin: 0 0 6px 0;
+    }
+    footer,
+    footer ul.social-networks {
+        text-align: center
+    }
+    footer ul.social-networks {
+        margin-top: 5px
+    }
+}
+
+@media(max-width: 580px) {
+    .scroll-top a.text-center {
+        right: 70px;
+    }
+    .our-room .lisssst {
+        padding: 15px;
+    }
+    .title_header_body h1,
+    .title_header_body h2 {
+        font-size: 30px;
+    }
+}

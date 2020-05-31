@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Tenali Ramakrishna' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700" type="text/css">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+
+</head>
+
+<body>
+    <!-- Appicaion -->
+    <div class="application" data-role="root" style="min-height: 0; padding-top: 0;">
+        <!-- Preloader start-->
+        <section class="preloader" data-role="preloader" style="visibility: hidden; opacity: 0;">
+            <div class="preloader__start" data-role="preloader-start">
+                <div class="img">
+                    <!-- <img src="" /> -->
+                </div>
+            </div>
+        </section>
+        <!-- Preloader end-->
+        <!-- Header start-->
+        <%- include('include/header') %>
+            <!-- Header end-->
+    </div>
+
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <h2 class="font-Tenali">About us</h2>
+        <h1 class="font-Tenali" style="font-size:70px">
+            <%= title %>
+        </h1>
+        <p>In a prime location in the 13th arr. District of Paris, Urban Bivouac Hotel is located 3.5 km from Opéra Bastille, 3.7 km from Luxembourg Gardens and 4.3 km from Notre Dame. Among the facilities at this property are a 24-hour front desk and room
+            service, along with free WiFi throughout the property. The property provides a concierge service, and luggage storage for guests. All guest rooms are equipped with air conditioning, a flat-screen TV with satellite channels, an electric tea
+            pot, a shower, a hairdryer and a desk. Rooms are complete with a private bathroom equipped with free toiletries, while some units at the hotel also have a seating area. Guest rooms feature a closet. Guests at Urban Bivouac Hotel can enjoy
+            a continental breakfast. Sainte Chapelle is 4.5 km from the accommodation, while Pompidou Center is 5.3 km away. The nearest airport is Paris - Orly Airport, 12.9 km from Urban Bivouac Hotel.</p>
+    </div>
+
+
+    <!-- Menu Footer -->
+    <%- include('include/menu_footer') %>
+
+        <!-- Footer -->
+        <%- include('include/footer') %>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script type="text/javascript" src="js/common.js"></script>
+</body>
+
+</html>

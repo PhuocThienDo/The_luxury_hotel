@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Tenali Ramakrishna' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700" type="text/css">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Tenali Ramakrishna';
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border-color: white;
+        }
+        
+        .bg-image {
+            /* The image used */
+            background-image: url("img/hand.jpg");
+            /* Add the blur effect */
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            /* Full height */
+            height: 110%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat !important;
+        }
+        /* Position text in the middle of the page/image */
+        
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(120, 150, 150, 1);
+            /* Black w/opacity/see-through */
+            color: white;
+            font-size: 22px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 70%;
+            padding-bottom: 20px;
+            text-align: center;
+            border-radius: 10px;
+            animation-name: example;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        
+        .btn-custom {
+            color: white;
+            border: white solid 1px;
+        }
+        
+        @keyframes example {
+            from {
+                left: -600px;
+            }
+            to {
+                left: 50%;
+                background-color: rgba(0, 18, 18, 0.5)
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Appicaion -->
+    <div class="application" data-role="root" style="min-height: 0; padding-top: 0;">
+        <!-- Preloader start-->
+        <section class="preloader" data-role="preloader" style="visibility: hidden; opacity: 0;">
+            <div class="preloader__start" data-role="preloader-start">
+                <div class="img">
+                    <!-- <img src="" /> -->
+                </div>
+            </div>
+        </section>
+        <!-- Preloader end-->
+        <!-- Header start-->
+        <%- include('include/header') %>
+            <!-- Header end-->
+    </div>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <h2>
+            <%= title %>
+        </h2>
+        <h1 style="font-size:70px">Come to
+            <%= title %>
+        </h1>
+
+        <p>Luxury Hotel </br>
+            38-40 rue St Severin</br>
+            Tel. : +33 (0)1 46 34 05 70</br>
+            Fax. : +33 (0)1 46 33 84 47</br>
+            E-mail : danang@luxuryhotel.net</p>
+
+        <form>
+            <input style="background: white;" type="text" id="fname" name="fname" placeholder="Your name ...">
+            <input style="background: white;" type="text" id="lname" name="lname" placeholder="Your number phone / gmail ...">
+            <p>
+                We will contact to you as soon as possible</p>
+            <button type="submit" class="btn btn-light btn-custom">Sent</button>
+        </form>
+
+    </div>
+
+
+
+    <!-- Menu Footer -->
+    <%- include('include/menu_footer') %>
+        <!-- Footer -->
+        <%- include('include/footer') %>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script type="text/javascript" src="js/common.js"></script>
+
+</body>
+
+</html>
