@@ -18,6 +18,11 @@ router.get('/contact', function(req, res, next) {
     res.render('contact', { title: title });
 });
 
+/* GET products page. */
+router.get('/products', function(req, res, next) {
+    res.render('products', { title: title });
+});
+
 
 
 module.exports = router;

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+        <%= title%>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700" type="text/css">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flexbox.animation.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.animation.css">
+</head>
+
+<body>
+
+    <!-- Appicaion -->
+    <div class="application" data-role="root" style="min-height: 0; padding-top: 0;">
+        <!-- Preloader start-->
+        <section class="preloader" data-role="preloader" style="visibility: hidden; opacity: 0;">
+            <div class="preloader__start" data-role="preloader-start">
+                <div class="img">
+                    <!-- <img src="" /> -->
+                </div>
+            </div>
+        </section>
+        <!-- Preloader end-->
+        <!-- Header start-->
+        <%- include('include/header') %>
+            <!-- Header end-->
+    </div>
+
+    <div class="banner">
+
+    </div>
+
+    <!-- Flexbox products -->
+    <!-- <div class="box"> -->
+    <div id="container">
+        <div class="flexbox anim-in">
+            <div class="image" style="background-image: url(/images/1562579641.jpg);"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="title" data-title="Venice">Venice</h1>
+                <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/italian-emblem.svg);"></div>
+                <ul class="city-info">
+                    <li class="country">Country: Italy</li>
+                    <li class="founded">Founded: 697</li>
+                    <li class="population">Population: 260,060</li>
+                </ul>
+            </div>
+            <div class="btn-close"></div>
+        </div>
+        <div class="flexbox anim-in">
+            <div class="image" style="background-image: url(/images/1562579641.jpg);"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="title" data-title="Paris">Paris</h1>
+                <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/french-emblem.svg);"></div>
+                <ul class="city-info">
+                    <li class="country">Country: France</li>
+                    <li class="founded">Founded: ~250BC</li>
+                    <li class="population">Population: 2.2 Million</li>
+                </ul>
+            </div>
+            <div class="btn-close"></div>
+        </div>
+        <div class="flexbox anim-in">
+            <div class="image" style="background-image: url(/images/1562579641.jpg);"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="title" data-title="Salzburg">Salzburg</h1>
+                <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/austrian-emblem.svg);"></div>
+                <ul class="city-info">
+                    <li class="country">Country: Austria</li>
+                    <li class="founded">Founded: 1622</li>
+                    <li class="population">Population: 145,871</li>
+                </ul>
+            </div>
+            <div class="btn-close"></div>
+        </div>
+        <div class="flexbox anim-in">
+            <div class="image" style="background-image: url(/images/1562579641.jpg);"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="title" data-title="Prague">Prague</h1>
+                <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/czech-emblem.svg);"></div>
+                <ul class="city-info">
+                    <li class="country">Country: Czech Republic</li>
+                    <li class="founded">Founded: 870</li>
+                    <li class="population">Population: 1.2 Million</li>
+                </ul>
+            </div>
+            <div class="btn-close"></div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- End flexbox products -->
+
+    <!-- Service -->
+    <div class="slider-container">
+        <div class="slider-control left inactive"></div>
+        <div class="slider-control right"></div>
+        <ul class="slider-pagi"></ul>
+        <div class="slider">
+            <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+              </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Big Data. Realtime Insight.</h2>
+                        <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;"> Content is automatically generated, sales emails, customer retention emails, and custom landing pages are generated based on site content using natural language processing to create relevant marketing content and distribute it
+                            across multiple channels.</p>
+                        <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-1 ">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+              </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Disrupting Industries</h2>
+                        <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as the customers you serve. There is no 'one size fits all' approach to marketing. Every business is unique, customers are unique,
+                            and your marketing should be as well.</p>
+                        <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+              </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
+                        <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year
+                            over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
+                        <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End service -->
+
+        <!-- Menu Footer -->
+        <%- include('include/menu_footer') %>
+            <!-- Footer -->
+            <%- include('include/footer') %>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script type="text/javascript" src="js/common.js"></script>
+                <script src="js/flexbox.animation.js"></script>
+                <script src="js/slideshow.animation.js"></script>
+</body>
+
+</html>

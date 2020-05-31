@@ -1,0 +1,465 @@
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Abril Fatface", serif;
+}
+
+#container {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.flexbox {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: all 1.0s;
+    transition: all 1.0s;
+}
+
+.flexbox.last-viewed .btn-close:after {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flexbox.last-viewed .btn-close:before {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.flexbox.last-viewed .content .city-info {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flexbox.last-viewed .content .city-info li:nth-of-type(1) {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flexbox.last-viewed .content .city-info li:nth-of-type(2) {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.flexbox.last-viewed .content .city-info li:nth-of-type(3) {
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.flexbox.last-viewed .content .emblem {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flexbox.last-viewed .image,
+.flexbox.active .image {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.flexbox.active {
+    cursor: default;
+}
+
+.flexbox.active .overlay {
+    width: 25%;
+    background-size: 100% 100%;
+    -webkit-transition: all 1.25s;
+    transition: all 1.25s;
+    -webkit-transition-delay: 1.75s;
+    transition-delay: 1.75s;
+}
+
+.flexbox.active .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.flexbox.active .content .title {
+    width: 25%;
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-delay: 1.25s;
+    transition-delay: 1.25s;
+}
+
+.flexbox.active .content .title:after {
+    height: 100%;
+    color: white;
+    overflow: initial;
+}
+
+.flexbox.active .content .title:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.flexbox.active .content .city-info {
+    opacity: 1;
+}
+
+.flexbox.active .content .city-info li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.flexbox.active .content .emblem {
+    opacity: 0.8;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+
+.flexbox.active .btn-close {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.flexbox.active .btn-close:before,
+.flexbox.active .btn-close:after {
+    opacity: 1;
+}
+
+.flexbox.active .btn-close:after {
+    -webkit-transform: rotate(45deg) translateX(0px);
+    transform: rotate(45deg) translateX(0px);
+}
+
+.flexbox.active .btn-close:before {
+    -webkit-transform: rotate(-45deg) translateX(0px);
+    transform: rotate(-45deg) translateX(0px);
+}
+
+.flexbox.anim-in {
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.flexbox.anim-in .image {
+    top: -20%;
+    left: -140%;
+    height: 140%;
+    width: 140%;
+    -webkit-animation: img-anim-in 1.2s forwards;
+    animation: img-anim-in 1.2s forwards;
+}
+
+.flexbox.anim-out {
+    -webkit-box-flex: 0;
+    flex: 0;
+    cursor: default;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.flexbox.anim-out .image {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: img-anim-out 1.2s forwards;
+    animation: img-anim-out 1.2s forwards;
+}
+
+.flexbox:nth-of-type(1).anim-in .image {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.flexbox:nth-of-type(1).anim-out .image {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.flexbox:nth-of-type(2).anim-in .image {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.flexbox:nth-of-type(2).anim-out .image {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.flexbox:nth-of-type(3).anim-in .image {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.flexbox:nth-of-type(3).anim-out .image {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.flexbox:nth-of-type(4).anim-in .image {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.flexbox:nth-of-type(4).anim-out .image {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.flexbox .image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    pointer-events: none;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.flexbox .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.7)), to(rgba(20, 20, 20, 0)));
+    background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+    background-position: 0 0;
+    background-size: 100% 200%;
+    opacity: 1;
+    pointer-events: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.flexbox .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.flexbox .content .title {
+    position: absolute;
+    top: -10px;
+    height: 65px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0 2px 2px #2f2f2f;
+    color: #3f3f3f;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.flexbox .content .title:after {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    display: block;
+    content: attr(data-title);
+    overflow: hidden;
+    color: #fff59d;
+    -webkit-transition: all 0.85s;
+    transition: all 0.85s;
+}
+
+.flexbox .content .title:before {
+    position: absolute;
+    bottom: 15px;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 85%;
+    background: white;
+    box-shadow: 0 2px 6px #2f2f2f;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform 1.25s;
+    transition: -webkit-transform 1.25s;
+    transition: transform 1.25s;
+    transition: transform 1.25s, -webkit-transform 1.25s;
+}
+
+.flexbox .content .emblem {
+    position: absolute;
+    height: 200px;
+    width: 25%;
+    opacity: 0;
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-delay: 1.75s;
+    transition-delay: 1.75s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.flexbox .content .city-info {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 30px 30px 30px 120px;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: 0 1px 4px #0f0f0f;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(20, 20, 20, 0)), to(rgba(20, 20, 20, 0.7)));
+    background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.flexbox .content .city-info li {
+    position: relative;
+    margin-bottom: 5px;
+    text-align: justify;
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+    -webkit-transition: all 0.75s;
+    transition: all 0.75s;
+}
+
+.flexbox .content .city-info li:nth-of-type(1) {
+    -webkit-transition-delay: 2.7s;
+    transition-delay: 2.7s;
+}
+
+.flexbox .content .city-info li:nth-of-type(2) {
+    -webkit-transition-delay: 2.9s;
+    transition-delay: 2.9s;
+}
+
+.flexbox .content .city-info li:nth-of-type(3) {
+    -webkit-transition-delay: 3.1s;
+    transition-delay: 3.1s;
+}
+
+.flexbox .btn-close {
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+    pointer-events: none;
+}
+
+.flexbox .btn-close:before,
+.flexbox .btn-close:after {
+    position: absolute;
+    top: 12px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.flexbox .btn-close:after {
+    -webkit-transform: rotate(45deg) translateX(-12px);
+    transform: rotate(45deg) translateX(-12px);
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+}
+
+.flexbox .btn-close:before {
+    -webkit-transform: rotate(-45deg) translateX(12px);
+    transform: rotate(-45deg) translateX(12px);
+    -webkit-transition-delay: 3.2s;
+    transition-delay: 3.2s;
+}
+
+.flexbox:hover:not(.active):not(.anim-out) .image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.flexbox:hover:not(.active):not(.anim-out) .overlay {
+    opacity: 0.6;
+}
+
+.flexbox:hover:not(.active):not(.anim-out) .content .title {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+}
+
+.flexbox:hover:not(.active):not(.anim-out) .content .title:after {
+    height: 100%;
+}
+
+@-webkit-keyframes img-anim-in {
+    to {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes img-anim-in {
+    to {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes img-anim-out {
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes img-anim-out {
+    to {
+        left: -100%;
+    }
+}
